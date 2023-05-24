@@ -4,6 +4,7 @@
         //ATTRIBUTES
         private string $_Fname;
         private string $_name;
+        private array $_books;
                 
         //METHODS
 
@@ -11,6 +12,7 @@
         function __construct(string $Fname, string $name){
             $this->_name = $name;
             $this->_Fname = $Fname;
+            $this->_books = [];
         }
 
         //get methods
@@ -31,11 +33,22 @@
         function set_surname($Fname){
             $this->_Fname = $Fname;
         }
+        function set_books($books){
+            $this->_books = $books;
+        }
+        function get_books(){
+            return $this->_books ;
+        }
 
 
         //toString method
         public function __toString(){
             return $this-> get_Fname()." ".$this-> get_name();
+        }
+
+        //add book to author
+        function addBook(Book $book){
+            $this->_books []= $book;
         }
     }
 

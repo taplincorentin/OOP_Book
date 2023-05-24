@@ -17,6 +17,7 @@
             $this->_author = $author;
             $this->_nbPages = $nbPages;
             $this->_pYear = $pYear;
+            $this->_author->addBook($this);
         }
 
         //get methods
@@ -35,16 +36,16 @@
 
         //set methods
         function set_title($title){
-            $this -> _title = $title;
+            $this ->_title = $title;
         }
         function set_author($author){
-            $this -> _author = $author;
+            $this ->_author = $author;
         }
         function set_nbPages($nbPages){
-            $this -> _nbPages = $nbPages;
+            $this ->_nbPages = $nbPages;
         }
         function set_pYear($pYear){
-            $this -> _pYear = $pYear;
+            $this ->_pYear = $pYear;
         }
         
         
@@ -53,6 +54,12 @@
             return $this->get_title()." est un livre écrit par ".$this->get_author().", il a ".$this->get_nbPages()." pages et a été publié en ".$this->get_pYear();
         }
 
-        function afficherBibliographie(){}
+        function afficherBibliographie($x){
+            // $res ="";
+            // foreach(){
+
+            // }
+        }
+        
     }
 ?>
