@@ -30,7 +30,7 @@
             $this->_name = $name;
         }
 
-        function set_surname($Fname){
+        function set_Fname($Fname){
             $this->_Fname = $Fname;
         }
         function set_books($books){
@@ -50,6 +50,14 @@
         function addBook(Book $book){
             $this->_books []= $book;
         }
+
+        function showBibliography(Author $author){
+            $books = $author->get_books();
+            foreach($books as $value){
+                echo $value;            
+            }
+        }
+        
     }
 
 

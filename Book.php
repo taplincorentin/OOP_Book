@@ -54,12 +54,7 @@
             return $this->get_title()." est un livre écrit par ".$this->get_author().", il a ".$this->get_nbPages()." pages et a été publié en ".$this->get_pYear();
         }
 
-        function afficherBibliographie($x){
-            // $res ="";
-            // foreach(){
-
-            // }
-        }
+        
         
     }
 ?>
