@@ -2,15 +2,15 @@
     class Author{
         
         //ATTRIBUTES
+        private string $_Fname;
         private string $_name;
-        private string $_fname;
-        
+                
         //METHODS
 
         //construct method
-        function __construct(string $name, string $fname){
+        function __construct(string $Fname, string $name){
             $this->_name = $name;
-            $this->_fname = $fname;
+            $this->_Fname = $Fname;
         }
 
         //get methods
@@ -18,24 +18,24 @@
             return $this->_name;
         }
 
-        function get_fname(){
-            return $this->_fname;
+        function get_Fname(){
+            return $this->_Fname;
         }
 
-        
+
         //set methods
         function set_name($name){
             $this->_name = $name;
         }
 
-        function set_surname($fname){
-            $this->_fname = $fname;
+        function set_surname($Fname){
+            $this->_Fname = $Fname;
         }
 
 
         //toString method
         public function __toString(){
-            return $this-> get_name()." ".$this-> get_fname(). "<br>";
+            return $this-> get_Fname()." ".$this-> get_name();
         }
     }
 
