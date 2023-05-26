@@ -2,16 +2,16 @@
     class Author{
         
         //ATTRIBUTES
-        private string $_Fname;
+        private string $_fName;
         private string $_name;
         private array $_books;
                 
         //METHODS
 
         //construct method
-        function __construct(string $Fname, string $name){
+        function __construct(string $fName, string $name){
             $this->_name = $name;
-            $this->_Fname = $Fname;
+            $this->_fName = $fName;
             $this->_books = [];
         }
 
@@ -20,8 +20,8 @@
             return $this->_name;
         }
 
-        function get_Fname(){
-            return $this->_Fname;
+        function get_fName(){
+            return $this->_fName;
         }
 
 
@@ -30,8 +30,8 @@
             $this->_name = $name;
         }
 
-        function set_Fname($Fname){
-            $this->_Fname = $Fname;
+        function set_fName($fName){
+            $this->_fName = $fName;
         }
         function set_books($books){
             $this->_books = $books;
@@ -43,7 +43,7 @@
 
         //toString method
         public function __toString(){
-            return $this-> get_Fname()." ".$this-> get_name();
+            return $this-> get_fName()." ".$this-> get_name();
         }
 
         //add book to author
@@ -51,10 +51,10 @@
             $this->_books []= $book;
         }
 
-        function showBibliography(Author $author){
-            $books = $author->get_books();
+        function showBibliography(){
+            $books = $this->get_books();
             foreach($books as $value){
-                echo $value;            
+                echo $value->get_title(),"(".$value->get_pYear().")"." : ".$value->get_nbPages()." pages"."<br>";            
             }
         }
         
