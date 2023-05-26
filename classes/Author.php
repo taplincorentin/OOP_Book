@@ -54,7 +54,7 @@
         function showBibliography(){
             $books = $this->get_books();
             foreach($books as $value){
-                echo $value->get_title(),"(".$value->get_pYear().")"." : ".$value->get_nbPages()." pages"."<br>";            
+                echo $value->get_title(),"(".$value->get_pYear().")"." : ".$value->get_nbPages()." pages / ".$value->get_price()." €. <br>";            
             }
         }
         
